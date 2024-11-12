@@ -46,10 +46,10 @@ cities_temp = {}
     temperature_range = max_temp - min_temp
     
     temperature_stats_v2 = {
-        "hottest_city": max_temp_city,
-        "coldest_city": min_temp_city,
-        "average_temperature": average_temperature,
-        "temperature_range": temperature_range
-    }
+                           "hottest_city": max_temp_city,
+                           "coldest_city": min_temp_city,
+                           "average_temperature": average_temperature,
+                           "temperature_range": temperature_range
+                           }
     
     return temperature_stats_v2
