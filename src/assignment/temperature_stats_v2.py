@@ -10,7 +10,7 @@ def get_temperature_stats_v2(file_path):
     - temperature_range: difference between highest and lowest temperature
     """
     # wrtie your code here
-cities_temp = {}
+    cities_temp = {}
 
     with open(file_path, 'r') as f:
         for line in f:
