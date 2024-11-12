@@ -36,10 +36,10 @@ def get_temperature_stats(file_path):
     temp_range = max_temp - min_temp
 
     temperature_stats = {
-                        "hottest_city": max_temp_city,
-                        "coldest_city": min_temp_city,
-                        "average_temperature": avr_temp,
-                        "temperature_range": temp_range,
-                        }
-    
+        "hottest_city": max_temp_city,
+        "coldest_city": min_temp_city,
+        "average_temperature": avr_temp,
+        "temperature_range": temp_range,
+    }
+
     return temperature_stats
