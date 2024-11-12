@@ -16,7 +16,7 @@ cities_temp = {}
         for line in f:
             city, temp = line.strip().split(',')
             temp = float(temp)
-            
+
             if city not in cities_temp:
                 cities_temp[city] = []
             cities_temp[city].append(temp)
@@ -27,29 +27,29 @@ cities_temp = {}
     min_temp_city = ""
     total_temp = 0
     total_count = 0
-    
+
     for city, temps in cities_temp.items():
         avg_city_temp = sum(temps) / len(temps)  
         total_temp += avg_city_temp
         total_count += 1
-        
+
         if avg_city_temp > max_temp:
             max_temp = avg_city_temp
             max_temp_city = city
-        
+
         if avg_city_temp < min_temp:
             min_temp = avg_city_temp
             min_temp_city = city
 
     average_temperature = total_temp / total_count
-    
+
     temperature_range = max_temp - min_temp
-    
+
     temperature_stats_v2 = {
-                           "hottest_city": max_temp_city,
-                           "coldest_city": min_temp_city,
-                           "average_temperature": average_temperature,
-                           "temperature_range": temperature_range
-                           }
-    
+        "hottest_city": max_temp_city,
+        "coldest_city": min_temp_city,
+        "average_temperature": average_temperature,
+        "temperature_range": temperature_range
+    }
+
     return temperature_stats_v2
