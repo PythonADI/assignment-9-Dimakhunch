@@ -21,15 +21,15 @@ def get_temperature_stats_v2(file_path):
                 cities_temp[city] = []
             cities_temp[city].append(temp)
 
-    max_temp = -100  
+    max_temp = -100
     max_temp_city = ""
-    min_temp = 100   
+    min_temp = 100
     min_temp_city = ""
     total_temp = 0
     total_count = 0
 
     for city, temps in cities_temp.items():
-        avg_city_temp = sum(temps) / len(temps)  
+        avg_city_temp = sum(temps) / len(temps)
         total_temp += avg_city_temp
         total_count += 1
 
