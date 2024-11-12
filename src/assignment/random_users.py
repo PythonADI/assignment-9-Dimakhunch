@@ -1,3 +1,5 @@
+import random
+
 NAME_CHOICES = [
     "John",
     "Jane",
