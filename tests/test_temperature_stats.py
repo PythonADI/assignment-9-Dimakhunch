@@ -1,13 +1,13 @@
 from tests.utils import TEST_DATA_DIR, clean_up_files
 
 try:
-    from src.assignment.temperature_stats import get_tempreature_stats
+    from src.assignment.temperature_stats import get_temperature_stats
 except ImportError:
     assert False, "Cannot import get_tempreature_stats from temperature_stats.py"
 
 
 @clean_up_files
-def test_get_tempreature_stats():
+def test_get_temperature_stats():
     file_path = TEST_DATA_DIR / "test_temperature_stats.txt"
     cities = ["city1", "city2", "city3", "city4", "city5"]
     temperatures = [
@@ -28,7 +28,7 @@ def test_get_tempreature_stats():
         "temperature_range": 50,
     }
 
-    resutls = get_tempreature_stats(file_path)
+    resutls = get_temperature_stats(file_path)
 
     for key in expected_output:
         assert (
