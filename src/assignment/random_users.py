@@ -1,3 +1,5 @@
+import random
+
 NAME_CHOICES = [
     "John",
     "Jane",
@@ -22,4 +24,8 @@ def generate_random_users(n, output_file):
 
     Do not return anything, just write to the file.
     """
-    # Write your code here
+    with open(output_file, 'a') as f:
+        for _ in range(n):
+            name = random.choice(NAME_CHOICES)
+            age = random.randint(18, 65)
+            f.write(f"{name}, {age}\n")

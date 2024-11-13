@@ -5,4 +5,6 @@ def save_users(users, file_path):
 
     do not return anything
     """
-    # write your code here
+    with open(file_path, 'w') as file:
+        for user in users:
+            file.write(f"{user['name']},{user['age']}\n")
